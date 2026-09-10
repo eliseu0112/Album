@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Uma coleção de nossas memórias.">
+    <meta name="theme-color" content="#55483d">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nossas memórias">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <title>Nossas memórias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="album-cover" id="albumCover">
+        <div class="cover-content">
+            <p class="small-title">UMA COLEÇÃO DOS</p>
+            <h1>Nossos momentos</h1>
+            <p class="cover-date">2026</p>
+            <button id="openAlbum" type="button">Abrir Álbum</button>
+        </div>
+    </main>
+
+    <main class="gallery" id="gallery">
+        <header class="gallery-header">
+            <div>
+                <h2>Nossas memórias</h2>
+                <p>Cada fotografia, uma história.</p>
+            </div>
+            <button id="addMemoryButton" class="add-memory-button" type="button">
+                + Adicionar lembrança
+            </button>
+        </header>
+
+        <section class="photo-container" id="photoContainer" aria-label="Álbum de fotografias">
+            <!-- Photos are created by JavaScript -->
+        </section>
+    </main>
+
+    <div class="memory-form-overlay" id="memoryFormOverlay" aria-hidden="true">
+        <div class="memory-form" role="dialog" aria-modal="true" aria-labelledby="memoryFormTitle">
+            <button class="form-close" id="closeMemoryForm" type="button" aria-label="Fechar formulário">×</button>
+            <h2 id="memoryFormTitle">Adicionar lembrança</h2>
+            <form id="memoryForm">
+                <label for="photoInput">Fotografia</label>
+                <input type="file" id="photoInput" accept="image/*" required>
+
+                <label for="memoryDate">Data</label>
+                <input type="date" id="memoryDate" required>
+
+                <label for="memoryLocation">Lugar</label>
+                <input type="text" id="memoryLocation" placeholder="Onde foi tirada?" maxlength="120">
+
+                <button type="submit" class="save-memory-button">Adicionar foto</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="photo-viewer" id="photoViewer" aria-hidden="true">
+        <button class="close-viewer" id="closeViewer" type="button" aria-label="Fechar fotografia">×</button>
+        <div class="viewer-content">
+            <div class="viewer-photo" id="viewerPhoto" tabindex="0" role="button" aria-label="Virar fotografia">
+                <div class="viewer-photo-inner">
+                    <div class="viewer-photo-front">
+                        <img id="viewerImage" src="" alt="">
+                    </div>
+                    <div class="viewer-photo-back">
+                        <div class="back-decoration">✦</div>
+                        <div class="back-date" id="viewerDate"></div>
+                        <div class="back-text" id="viewerText"></div>
+                        <div class="back-location" id="viewerLocation"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="viewer-description">
+                <p class="viewer-hint">Clique na fotografia para virar</p>
+                <button id="restorePhoto" class="restore-button" type="button">
+                    Restaurar fotografia
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cameraFlash" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+NOSSAS MEMÓRIAS — PWA
+
+Arquivos:
+- index.html
+- style.css
+- script.js
+- manifest.json
+- service-worker.js
+- icons/icon-192.png
+- icons/icon-512.png
+
+COMO PUBLICAR
+1. Envie todos estes arquivos para um repositório público do GitHub.
+2. No GitHub: Settings > Pages.
+3. Source: Deploy from a branch.
+4. Branch: main / (root).
+5. Abra a URL gerada no celular.
+6. No Chrome do celular, escolha "Adicionar à tela inicial" / "Instalar aplicativo".
+
+OBSERVAÇÃO
+As fotografias continuam sendo armazenadas localmente no navegador (IndexedDB).
+Para levar as fotos do computador ao celular, use o recurso de exportação ".album"
+do próprio álbum e, no celular, "Mesclar um álbum" ou "Substituir pelo álbum".

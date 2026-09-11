@@ -1,23 +1,3 @@
-
-/* =========================================
-   PWA — SERVICE WORKER
-========================================= */
-
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./service-worker.js")
-            .then(() => {
-                console.log("Álbum PWA pronto para uso offline.");
-            })
-            .catch(error => {
-                console.warn(
-                    "Não foi possível registrar o modo offline.",
-                    error
-                );
-            });
-    });
-}
-
 "use strict";
 
 
@@ -3189,7 +3169,7 @@ if (deletePhotoButton) {
     );
 
     deletePhotoButton.textContent =
-        "Rasgar esta fotografia";
+        "retirar esta fotografia";
 
 }
 
@@ -3596,7 +3576,7 @@ async function deleteCurrentPhoto() {
             );
 
             deletePhotoButton.textContent =
-                "Sim, rasgar e retirar";
+                "Sim, retirar e rasgar";
 
         }
 
@@ -3752,7 +3732,7 @@ async function deleteCurrentPhoto() {
             );
 
             deletePhotoButton.textContent =
-                "Rasgar esta fotografia";
+                "Retirar esta fotografia";
 
         }
 
@@ -3805,7 +3785,7 @@ async function deleteCurrentPhoto() {
             );
 
             deletePhotoButton.textContent =
-                "Rasgar esta fotografia";
+                "Retirar esta fotografia";
 
         }
 

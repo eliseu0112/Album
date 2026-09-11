@@ -201,6 +201,10 @@ button {
         70px 6vh 30px;
 
     opacity: 0;
+	
+	background:
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.035), transparent 45%),
+        #C89550;
 
     transition:
         opacity 1s ease;
@@ -233,7 +237,7 @@ button {
 
     letter-spacing: 2px;
 
-    opacity: 0.5;
+    opacity: 0.62;
 }
 
 

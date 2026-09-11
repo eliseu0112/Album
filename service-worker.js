@@ -1,4 +1,4 @@
-const CACHE_NAME = "nossas-memorias-pwa-v1";
+const CACHE_NAME = "nossas-memorias-pwa-v2";
 
 const APP_SHELL = [
     "./",

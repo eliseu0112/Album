@@ -1,5 +1,23 @@
 "use strict";
 
+/* =========================================
+   PWA — SERVICE WORKER
+========================================= */
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(() => {
+                console.log("Álbum PWA pronto para uso offline.");
+            })
+            .catch(error => {
+                console.warn(
+                    "Não foi possível registrar o modo offline.",
+                    error
+                );
+            });
+    });
+}
 
 /* =========================================
    GLOBAL STATE
